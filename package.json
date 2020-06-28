@@ -4,10 +4,13 @@
   "description": "Testing MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "env-cmd -f ./config/test.env jest",
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "startDB": "/Users/luuizpaulo/mongodb/bin/mongod --dbpath=/Users/luuizpaulo/mongodb-data"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [
     "MongoDB"
@@ -15,18 +18,19 @@
   "author": "Luiz Carneiro",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.2.0",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "3.1.10",
     "mongoose": "5.3.16",
     "multer": "1.4.1",
     "sharp": "^0.25.4",
-    "validator": "10.9.0",
-    "bcryptjs": "^2.4.3",
-    "@sendgrid/mail": "^7.2.0"
+    "validator": "10.9.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
   }
 }

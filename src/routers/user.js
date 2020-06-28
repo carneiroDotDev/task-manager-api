@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/users', async (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   const user = new User(req.body)
   const token = await user.generateAuthToken()
 
@@ -48,7 +48,7 @@ router.post('/users/login', async (req, res) => {
     const token = await user.generateAuthToken()
     res.send({ user, token })
   } catch (e) {
-    res.status(500).send()
+    res.status(500).send('user not found')
   }
 })
 
