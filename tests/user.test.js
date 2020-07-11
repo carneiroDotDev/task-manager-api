@@ -50,7 +50,10 @@ test('Should login an existing user', async () => {
 })
 
 test('Should fail with a non existing user', async () => {
-  await request(app).post('/users/login').send({ ...userTwo }).expect('user not found')
+  await request(app).post('/users/login').send({
+    name: 'LuizPPPPP',
+    email: 'eita@example.com'
+  }).expect('user not found')
 })
 
 test('Should get profile for user', async () => {

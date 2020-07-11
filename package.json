@@ -18,19 +18,19 @@
   "author": "Luiz Carneiro",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.2.0",
+    "@sendgrid/mail": "^7.2.1",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "3.1.10",
-    "mongoose": "5.3.16",
-    "multer": "1.4.1",
+    "mongodb": "3.5.9",
+    "mongoose": "5.9.21",
+    "multer": "1.4.2",
     "sharp": "^0.25.4",
-    "validator": "10.9.0"
+    "validator": "13.1.1"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
   }
 }
